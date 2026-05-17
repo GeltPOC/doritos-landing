@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-bebas: 'Impact', 'Arial Black', sans-serif;
+  --font-body: 'Arial', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1a0a00;
+  color: white;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .text-shadow-glow {
+    text-shadow:
+      0 0 30px rgba(255, 107, 0, 0.8),
+      0 0 60px rgba(255, 107, 0, 0.4);
+  }
+  .text-shadow-red {
+    text-shadow:
+      2px 2px 0px #8b0000,
+      4px 4px 0px rgba(139, 0, 0, 0.5);
+  }
+  .bg-fire {
+    background: linear-gradient(135deg, #e31837 0%, #ff6b00 50%, #ffd700 100%);
+  }
+  .border-fire {
+    border-image: linear-gradient(135deg, #e31837, #ff6b00, #ffd700) 1;
+  }
+}
